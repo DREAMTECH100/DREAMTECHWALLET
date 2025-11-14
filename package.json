@@ -2,7 +2,7 @@
   "name": "balance",
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://DREAMTECH100.github.io/balance",
+  "homepage": "https://DREAMTECH100.github.io/DREAMTECHWALLET",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
