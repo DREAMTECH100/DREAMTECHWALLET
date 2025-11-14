@@ -1,27 +1,43 @@
+/* ========== LOGIN FUNCTION (GitHub Pages Safe Redirect) ========== */
 function login() {
-  let user = document.getElementById("username").value;
-  let pass = document.getElementById("password").value;
+  let user = document.getElementById("username").value.trim();
+  let pass = document.getElementById("password").value.trim();
   let msg = document.getElementById("errorMsg");
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
-    window.location.href = "wallet.html";
+
+    // 🚀 Auto-detect repo URL for GitHub Pages:
+    // Removes index.html and redirects safely to wallet.html
+    const base = window.location.href.replace("index.html", "");
+    window.location.href = base + "wallet.html";
+
   } else {
     msg.textContent = "Invalid username or password";
   }
 }
-/* GLOBAL COUNTDOWN TIMER */
+
+
+
+/* ========== GLOBAL COUNTDOWN TIMER FOR WALLET ========== */
+
 function runCountdown() {
-  const releaseDate = new Date();
+  const releaseDate = new Date();  
   releaseDate.setMonth(releaseDate.getMonth() + 3);
 
   function updateTimer() {
     const now = new Date();
     const diff = releaseDate - now;
 
+    const countdownEl = document.getElementById("countdown");
+    const btnCountdownEl = document.getElementById("btnCountdown");
+    const btn = document.getElementById("withdrawBtn");
+
+    // Prevent errors if these elements don't exist
+    if (!countdownEl || !btnCountdownEl || !btn) return;
+
     if (diff <= 0) {
-      document.getElementById("countdown").innerText = "Unlocked!";
-      document.getElementById("btnCountdown").innerText = "Withdrawal Available";
-      const btn = document.getElementById("withdrawBtn");
+      countdownEl.innerText = "Unlocked!";
+      btnCountdownEl.innerText = "Withdrawal Available";
       btn.disabled = false;
       btn.classList.add("withdraw-active");
       btn.innerText = "Withdraw Funds";
@@ -32,18 +48,18 @@ function runCountdown() {
     const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const mins = Math.floor((diff / (1000 * 60)) % 60);
 
-    document.getElementById("countdown").innerText = 
-        `${days} days ${hrs} hrs ${mins} mins`;
-
-    document.getElementById("btnCountdown").innerText = 
-        `${days}d ${hrs}h ${mins}m`;
+    countdownEl.innerText = `${days} days ${hrs} hrs ${mins} mins`;
+    btnCountdownEl.innerText = `${days}d ${hrs}h ${mins}m`;
   }
 
   updateTimer();
-  setInterval(updateTimer, 60000); // update every 1 minute
+  setInterval(updateTimer, 60000); // update every minute
 }
 
-/* RUN ONLY ON WALLET PAGE */
-if (location.pathname.includes("wallet.html")) {
+
+
+/* ========== RUN COUNTDOWN ONLY ON WALLET PAGE ========== */
+
+if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
