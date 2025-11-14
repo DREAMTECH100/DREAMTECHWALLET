@@ -4,20 +4,16 @@ function login() {
   let msg = document.getElementById("errorMsg");
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
-
-    // Detect the GitHub Pages base path
-    const pathParts = window.location.pathname.split("/");
-    const repoName = pathParts[1]; // GitHub repo folder
-
-    // Build final wallet.html URL
-    const finalURL = `/${repoName}/wallet.html`;
+    // Build correct GitHub Pages URL
+    const repoFolder = "DREAMTECHWALLET"; // your repo name
+    const finalURL = `https://dreamtech100.github.io/${repoFolder}/wallet.html`;
 
     window.location.href = finalURL;
-
   } else {
     msg.textContent = "Invalid username or password";
   }
 }
+
 
 
 
@@ -66,4 +62,5 @@ function runCountdown() {
 if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
+
 
