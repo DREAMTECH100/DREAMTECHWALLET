@@ -6,14 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body class="wallet-body">
 
-
 <header class="wallet-header">
-    
- 
     <div class="header-left">
         <img src="me.png" class="avatar">
         <div>
@@ -22,26 +17,19 @@
         </div>
     </div>
 
-   
-  <div class="header-right">
-    <span class="icon bell" onclick="location.href='notifications.html'">🔔</span>
-    <span class="icon settings" onclick="location.href='settings.html'">⚙️</span>
-</div>
-
-
+    <div class="header-right">
+        <span class="icon bell" onclick="location.href='notifications.html'">🔔</span>
+        <span class="icon settings" onclick="location.href='settings.html'">⚙️</span>
+    </div>
 </header>
 
-
 <div class="wallet-container">
-
-  
     <div class="balance-card">
         <p class="label">Current Wallet Balance</p>
         <h1 id="balanceAmount">$1,400.00</h1>
         <p class="acct-tag">Account No: DT-2025-992134</p>
     </div>
 
-   
     <div class="info-box">
         <h3>🎓 Graduation Startup Grant</h3>
         <p>
@@ -56,7 +44,6 @@
         </p>
     </div>
 
-   
     <div class="bonus-box">
         <h3>🎉 Bonus Eligibility</h3>
         <ul>
@@ -67,13 +54,11 @@
         </ul>
     </div>
 
-    
     <div class="countdown-box">
         <h3>⏳ Withdrawal unlocks in:</h3>
         <p id="countdown"></p>
     </div>
 
-   
     <div class="breakdown-card">
         <h3>💰 Funding Breakdown</h3>
         <div class="breakdown-row">
@@ -90,10 +75,8 @@
         </div>
     </div>
 
-    <!-- TRANSACTION HISTORY (Dummy) -->
     <div class="history-box">
         <h3>📄 Recent Transactions</h3>
-
         <div class="txn">
             <div>
                 <p class="txn-title">Startup Grant — Pending Deposit</p>
@@ -101,7 +84,6 @@
             </div>
             <p class="txn-amount pending">+$1,400.00</p>
         </div>
-
         <div class="txn">
             <div>
                 <p class="txn-title">Performance Bonus Evaluation</p>
@@ -111,11 +93,9 @@
         </div>
     </div>
 
- 
-<button id="withdrawBtn" class="withdraw-btn" disabled>
-    Withdrawal Locked – <span id="btnCountdown">Loading...</span>
-</button>
-
+    <button id="withdrawBtn" class="withdraw-btn" disabled>
+        Withdrawal Locked – <span id="btnCountdown">Loading...</span>
+    </button>
 
     <a class="learn-btn" href="program-details.html">Learn more about DreamTech Startup Fund</a>
 </div>
@@ -123,4 +103,3 @@
 <script src="app.js"></script>
 </body>
 </html>
-
