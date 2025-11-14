@@ -5,7 +5,7 @@ function login() {
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
     // Correct GitHub Pages URL
-    const repoName = "DREAMTECHWALLET"; // <-- replace with your repo name
+    const repoName = "DREAMTECHWALLET"; // your repo
     const walletURL = `https://dreamtech100.github.io/${repoName}/wallet.html`;
 
     window.location.href = walletURL;
@@ -13,6 +13,7 @@ function login() {
     msg.textContent = "Invalid username or password";
   }
 }
+
 
 function runCountdown() {
   const releaseDate = new Date();
@@ -54,3 +55,4 @@ function runCountdown() {
 if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
+
