@@ -4,20 +4,12 @@ function login() {
   let msg = document.getElementById("errorMsg");
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
-    // Build correct GitHub Pages URL
-    const repoFolder = "DREAMTECHWALLET"; // your repo name
-    const finalURL = `https://dreamtech100.github.io/${repoFolder}/wallet.html`;
-
-    window.location.href = finalURL;
+    // Use relative path instead of absolute
+    window.location.href = "DREAMTECHWALLET/wallet.html";
   } else {
     msg.textContent = "Invalid username or password";
   }
 }
-
-
-
-
-
 
 function runCountdown() {
   const releaseDate = new Date();  
@@ -31,7 +23,6 @@ function runCountdown() {
     const btnCountdownEl = document.getElementById("btnCountdown");
     const btn = document.getElementById("withdrawBtn");
 
-    // Prevent errors if these elements don't exist
     if (!countdownEl || !btnCountdownEl || !btn) return;
 
     if (diff <= 0) {
@@ -55,12 +46,7 @@ function runCountdown() {
   setInterval(updateTimer, 60000); // update every minute
 }
 
-
-
-/* ========== RUN COUNTDOWN ONLY ON WALLET PAGE ========== */
-
+// Run countdown only on wallet page
 if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
-
-
