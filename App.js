@@ -4,7 +4,7 @@ function login() {
   let msg = document.getElementById("errorMsg");
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
-    // Use relative path instead of absolute
+    
     window.location.href = "DREAMTECHWALLET/wallet.html";
   } else {
     msg.textContent = "Invalid username or password";
@@ -50,3 +50,4 @@ function runCountdown() {
 if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
+
