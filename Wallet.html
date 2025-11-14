@@ -8,21 +8,40 @@
 
 <body class="wallet-body">
 
+<body class="wallet-body">
+
+
 <header class="wallet-header">
-    <h2>Welcome, Stacey</h2>
-    <p class="sub">DreamTech Graduate — Class of 2025</p>
+    
+ 
+    <div class="header-left">
+        <img src="me.png" class="avatar">
+        <div>
+            <h2 class="user-name">Stacey Jordan</h2>
+            <p class="user-id">ID: DT-2025-992134</p>
+        </div>
+    </div>
+
+   
+  <div class="header-right">
+    <span class="icon bell" onclick="location.href='notifications.html'">🔔</span>
+    <span class="icon settings" onclick="location.href='settings.html'">⚙️</span>
+</div>
+
+
 </header>
+
 
 <div class="wallet-container">
 
-    <!-- BALANCE CARD -->
+  
     <div class="balance-card">
         <p class="label">Current Wallet Balance</p>
         <h1 id="balanceAmount">$1,400.00</h1>
         <p class="acct-tag">Account No: DT-2025-992134</p>
     </div>
 
-    <!-- FUND DETAILS -->
+   
     <div class="info-box">
         <h3>🎓 Graduation Startup Grant</h3>
         <p>
@@ -37,7 +56,7 @@
         </p>
     </div>
 
-    <!-- BONUS ELIGIBILITY -->
+   
     <div class="bonus-box">
         <h3>🎉 Bonus Eligibility</h3>
         <ul>
@@ -48,13 +67,13 @@
         </ul>
     </div>
 
-    <!-- COUNTDOWN CARD -->
+    
     <div class="countdown-box">
         <h3>⏳ Withdrawal unlocks in:</h3>
         <p id="countdown"></p>
     </div>
 
-    <!-- BREAKDOWN CARD -->
+   
     <div class="breakdown-card">
         <h3>💰 Funding Breakdown</h3>
         <div class="breakdown-row">
@@ -92,8 +111,11 @@
         </div>
     </div>
 
-    <!-- ACTION BUTTONS -->
-    <button class="withdraw-btn" disabled>Withdrawal Locked</button>
+ 
+<button id="withdrawBtn" class="withdraw-btn" disabled>
+    Withdrawal Locked – <span id="btnCountdown">Loading...</span>
+</button>
+
 
     <a class="learn-btn" href="program-details.html">Learn more about DreamTech Startup Fund</a>
 </div>
