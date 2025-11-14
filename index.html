@@ -2,104 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DreamTech Wallet</title>
+  <title>DreamTech Wallet Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="wallet-body">
+<body class="login-body">
 
-<header class="wallet-header">
-    <div class="header-left">
-        <img src="me.png" class="avatar">
-        <div>
-            <h2 class="user-name">Stacey Jordan</h2>
-            <p class="user-id">ID: DT-2025-992134</p>
-        </div>
-    </div>
+  <div class="login-container">
+      <h1 class="app-title">DreamTech Wallet</h1>
 
-    <div class="header-right">
-        <span class="icon bell" onclick="location.href='notifications.html'">🔔</span>
-        <span class="icon settings" onclick="location.href='settings.html'">⚙️</span>
-    </div>
-</header>
+      <div class="login-box">
+        <h2>Login</h2>
 
-<div class="wallet-container">
-    <div class="balance-card">
-        <p class="label">Current Wallet Balance</p>
-        <h1 id="balanceAmount">$1,400.00</h1>
-        <p class="acct-tag">Account No: DT-2025-992134</p>
-    </div>
+        <input id="username" type="text" placeholder="Enter Username">
+        <input id="password" type="password" placeholder="Enter Password">
 
-    <div class="info-box">
-        <h3>🎓 Graduation Startup Grant</h3>
-        <p>
-            Dear Stacey,<br><br>
-            This wallet is part of your <b>DreamTech Graduate Startup Program</b>.
-            Your $1,400 startup grant will be accessible after your 
-            <b>3-month incubation period</b> ends.
-            <br><br>
-            <b>Status:</b> Pending Release<br>
-            <b>Wallet Tier:</b> Graduate Tier Level 1<br>
-            <b>Fund Type:</b> Post-Graduation Startup Grant
-        </p>
-    </div>
+        <button onclick="login()">Login</button>
 
-    <div class="bonus-box">
-        <h3>🎉 Bonus Eligibility</h3>
-        <ul>
-            <li>Top 5 Ranking → <b>+ $1,000 Bonus</b></li>
-            <li>6th–10th Ranking → <b>+ $500 Bonus</b></li>
-            <li>Your Current Rank: <b>Pending Academic Review</b></li>
-            <li>Projected Payout: <b>$1,400 – $2,400</b></li>
-        </ul>
-    </div>
+        <p class="error" id="errorMsg"></p>
+      </div>
+  </div>
 
-    <div class="countdown-box">
-        <h3>⏳ Withdrawal unlocks in:</h3>
-        <p id="countdown"></p>
-    </div>
-
-    <div class="breakdown-card">
-        <h3>💰 Funding Breakdown</h3>
-        <div class="breakdown-row">
-            <span>Base Grant:</span>
-            <span>$1,400.00</span>
-        </div>
-        <div class="breakdown-row">
-            <span>Performance Bonus:</span>
-            <span>Pending</span>
-        </div>
-        <div class="breakdown-row">
-            <span>Total Expected:</span>
-            <span>$1,400.00+</span>
-        </div>
-    </div>
-
-    <div class="history-box">
-        <h3>📄 Recent Transactions</h3>
-        <div class="txn">
-            <div>
-                <p class="txn-title">Startup Grant — Pending Deposit</p>
-                <p class="txn-date">Will reflect after graduation</p>
-            </div>
-            <p class="txn-amount pending">+$1,400.00</p>
-        </div>
-        <div class="txn">
-            <div>
-                <p class="txn-title">Performance Bonus Evaluation</p>
-                <p class="txn-date">Awaiting final ranking</p>
-            </div>
-            <p class="txn-amount pending">+$500–$1,000</p>
-        </div>
-    </div>
-
-    <button id="withdrawBtn" class="withdraw-btn" disabled>
-        Withdrawal Locked – <span id="btnCountdown">Loading...</span>
-    </button>
-
-    <a class="learn-btn" href="program-details.html">Learn more about DreamTech Startup Fund</a>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
