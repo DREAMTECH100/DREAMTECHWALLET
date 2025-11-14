@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DreamTech Wallet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="wallet-body">
+
+<header class="wallet-header">
+    <h2>Welcome, Stacey</h2>
+    <p class="sub">DreamTech Graduate — Class of 2025</p>
+</header>
+
+<div class="wallet-container">
+
+    <!-- BALANCE CARD -->
+    <div class="balance-card">
+        <p class="label">Current Wallet Balance</p>
+        <h1 id="balanceAmount">$1,400.00</h1>
+        <p class="acct-tag">Account No: DT-2025-992134</p>
+    </div>
+
+    <!-- FUND DETAILS -->
+    <div class="info-box">
+        <h3>🎓 Graduation Startup Grant</h3>
+        <p>
+            Dear Stacey,<br><br>
+            This wallet is part of your <b>DreamTech Graduate Startup Program</b>.
+            Your $1,400 startup grant will be accessible after your 
+            <b>3-month incubation period</b> ends.
+            <br><br>
+            <b>Status:</b> Pending Release<br>
+            <b>Wallet Tier:</b> Graduate Tier Level 1<br>
+            <b>Fund Type:</b> Post-Graduation Startup Grant
+        </p>
+    </div>
+
+    <!-- BONUS ELIGIBILITY -->
+    <div class="bonus-box">
+        <h3>🎉 Bonus Eligibility</h3>
+        <ul>
+            <li>Top 5 Ranking → <b>+ $1,000 Bonus</b></li>
+            <li>6th–10th Ranking → <b>+ $500 Bonus</b></li>
+            <li>Your Current Rank: <b>Pending Academic Review</b></li>
+            <li>Projected Payout: <b>$1,400 – $2,400</b></li>
+        </ul>
+    </div>
+
+    <!-- COUNTDOWN CARD -->
+    <div class="countdown-box">
+        <h3>⏳ Withdrawal unlocks in:</h3>
+        <p id="countdown"></p>
+    </div>
+
+    <!-- BREAKDOWN CARD -->
+    <div class="breakdown-card">
+        <h3>💰 Funding Breakdown</h3>
+        <div class="breakdown-row">
+            <span>Base Grant:</span>
+            <span>$1,400.00</span>
+        </div>
+        <div class="breakdown-row">
+            <span>Performance Bonus:</span>
+            <span>Pending</span>
+        </div>
+        <div class="breakdown-row">
+            <span>Total Expected:</span>
+            <span>$1,400.00+</span>
+        </div>
+    </div>
+
+    <!-- TRANSACTION HISTORY (Dummy) -->
+    <div class="history-box">
+        <h3>📄 Recent Transactions</h3>
+
+        <div class="txn">
+            <div>
+                <p class="txn-title">Startup Grant — Pending Deposit</p>
+                <p class="txn-date">Will reflect after graduation</p>
+            </div>
+            <p class="txn-amount pending">+$1,400.00</p>
+        </div>
+
+        <div class="txn">
+            <div>
+                <p class="txn-title">Performance Bonus Evaluation</p>
+                <p class="txn-date">Awaiting final ranking</p>
+            </div>
+            <p class="txn-amount pending">+$500–$1,000</p>
+        </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <button class="withdraw-btn" disabled>Withdrawal Locked</button>
+
+    <a class="learn-btn" href="program-details.html">Learn more about DreamTech Startup Fund</a>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
