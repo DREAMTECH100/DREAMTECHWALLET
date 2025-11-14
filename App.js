@@ -1,4 +1,3 @@
-/* ========== LOGIN FUNCTION (GitHub Pages Safe Redirect) ========== */
 function login() {
   let user = document.getElementById("username").value.trim();
   let pass = document.getElementById("password").value.trim();
@@ -6,10 +5,14 @@ function login() {
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
 
-    // 🚀 Auto-detect repo URL for GitHub Pages:
-    // Removes index.html and redirects safely to wallet.html
-    const base = window.location.href.replace("index.html", "");
-    window.location.href = base + "wallet.html";
+    // Detect the GitHub Pages base path
+    const pathParts = window.location.pathname.split("/");
+    const repoName = pathParts[1]; // GitHub repo folder
+
+    // Build final wallet.html URL
+    const finalURL = `/${repoName}/wallet.html`;
+
+    window.location.href = finalURL;
 
   } else {
     msg.textContent = "Invalid username or password";
@@ -18,7 +21,7 @@ function login() {
 
 
 
-/* ========== GLOBAL COUNTDOWN TIMER FOR WALLET ========== */
+
 
 function runCountdown() {
   const releaseDate = new Date();  
@@ -63,3 +66,4 @@ function runCountdown() {
 if (window.location.pathname.includes("wallet.html")) {
   runCountdown();
 }
+
