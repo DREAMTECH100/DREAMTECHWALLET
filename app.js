@@ -4,7 +4,7 @@ function login() {
   let msg = document.getElementById("errorMsg");
 
   if (user === "Staceyjordan" && pass === "stacey1234") {
-    window.location.href = "index.html"; // redirect to dashboard
+    window.location.href = "dashboard.html"; // redirect to dashboard
   } else {
     msg.textContent = "Invalid username or password";
   }
@@ -47,6 +47,6 @@ function runCountdown() {
 }
 
 // Run countdown only on dashboard
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("dashboard.html")) {
   runCountdown();
 }
